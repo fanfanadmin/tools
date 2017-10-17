@@ -2,6 +2,8 @@
 #  -*- coding: utf-8 -*-
 # __author__  =  "ffadmin"
 import sys
+ 
+#获取下载速度小于2M的行，并带上上一行链接信息
 def format_log(txt):
     with open(txt,'r') as f:
         Wlist = f.readlines()
@@ -14,4 +16,5 @@ def format_log(txt):
 
 if __name__ == '__main__':
     format_log(sys.argv[1])
-
+ 
+# [root@ffadmin tools]# python format_log.py wget_log.txt
